@@ -47,6 +47,32 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 *   **The Problem:** Working memory is often a bottleneck. Holding a number in your head while counting change leads to anxiety.
 *   **The Solution:** The app breaks complex transactions into isolated, linear steps (Step 1: Scan Bill -> Step 2: Scan Cash). The interface acts as an external working memory, ensuring the user never has to "hold" a number in their head.
 
+<h3>📱 Step-by-Step Flow</h3>
+
+<p>
+  <img
+    src="https://github.com/user-attachments/assets/ab509322-dd81-4d95-80b5-030c319c940f"
+    width="220"
+    alt="Step 1"
+  />
+  <img
+    src="https://github.com/user-attachments/assets/4431815f-db98-4b83-8045-1fd7a949c67e"
+    width="220"
+    alt="Step 2"
+  />
+  <img
+    src="https://github.com/user-attachments/assets/7fd1efb9-49d9-4caa-a32e-aff71566c64c"
+    width="220"
+    alt="Step 3"
+  />
+  <img
+    src="https://github.com/user-attachments/assets/ac9c2e6c-ad7b-4bed-959b-d44fe992ac6e"
+    width="220"
+    alt="Step 4"
+  />
+</p>
+
+
 ---
 
 ## ✨ Key Features
@@ -67,14 +93,12 @@ The complete loop. The user takes a photo of the bill, a photo of the cash they 
 ### 🧮 2. Check My Change (Visual Picker)
 A hybrid flow where the user inputs what they paid using **Visual Money Cards** (tapping an image of a $20 bill rather than typing "20") and scans the change received. The app visually highlights exactly which notes are missing or extra.
 
-<h3>🎥 video — of the functionaliy</h3>
-<a href="https://www.youtube.com/watch?v=i3c02MN0B4k" target="_blank" rel="noopener noreferrer">
-  <img
-    src="https://img.youtube.com/vi/i3c02MN0B4k/maxresdefault.jpg"
-    alt="Demo of ND Money Flow"
-    width="480"
-  />
-</a>
+Watch a short walkthrough of the **Check my change flow**, showing how transactions move through the system and how the primary user interactions work end-to-end.
+
+👉 **[Watch the demo on YouTube](https://www.youtube.com/watch?v=i3c02MN0B4k)**
+
+[![ND-Money Core Money Flow Demo](https://img.youtube.com/vi/i3c02MN0B4k/maxresdefault.jpg)](https://www.youtube.com/watch?v=i3c02MN0B4k)
+
 
 
 ### 🤝 3. Payment Assistant
@@ -82,6 +106,13 @@ A user scans the contents of their wallet. The AI analyzes the available denomin
 
 ### 🏪 4. Merchant Mode (Give Change)
 Designed for neurodivergent employees. It calculates the change due and displays a **visual map** of exactly which notes and coins to pick from the register to hand to the customer.
+
+Watch a quick demo of **ND-Money’s Merchant Mode**, designed for ND folks working the cash register and point-of-sale workflows.
+
+👉 **[Watch the demo on YouTube](https://www.youtube.com/watch?v=IGCEPZj7300)**
+
+[![ND-Money POS Demo](https://img.youtube.com/vi/IGCEPZj7300/maxresdefault.jpg)](https://www.youtube.com/watch?v=IGCEPZj7300)
+
 
 ### 🗣️ Voice-First Input
 Integrated speech-to-text allows users to simply say "Twenty-five dollars" rather than struggling with a number pad.
