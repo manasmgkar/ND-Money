@@ -63,7 +63,7 @@ Integrated speech-to-text allows users to simply say "Twenty-five dollars" rathe
 *   **Frontend:** React, TypeScript, Vite
 *   **Styling:** Tailwind CSS
 *   **Cloud AI:** Google Gemini API (`@google/genai`)
-*   **On-Device AI:** TensorFlow Lite / MediaPipe (`@mediapipe/tasks-vision`)
+*   **On-Device AI:** Custom Trained Small Classifiers that run on TensorFlow Lite / MediaPipe (`@mediapipe/tasks-vision`)
 *   **Deployment:** Capacitor (Android/iOS wrapper), PWA
 
 ---
