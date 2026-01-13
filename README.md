@@ -77,8 +77,8 @@ Designed for neurodivergent employees. It calculates the change due and displays
 Integrated speech-to-text allows users to simply say "Twenty-five dollars" rather than struggling with a number pad.
 
 ### 📡 Hybrid AI Engine
-*   **Online:** Uses **Google Gemini 1.5 Flash** for high-level reasoning, complex scene analysis, and payment advice.
-*   **Offline:** Uses on-device **TensorFlow Lite** models for detecting and counting currency when internet connectivity is poor.
+*   **Online:** Uses **Google Gemini 3.0 Flash** for high-level reasoning, complex scene analysis, and payment advice.
+*   **Offline:** Uses on-device  **custom trained small classifiers** that run on **TensorFlow Lite** models for detecting and counting currency when internet connectivity is poor.
 
 ---
 
