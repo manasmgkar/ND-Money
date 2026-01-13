@@ -57,6 +57,16 @@ The complete loop. The user takes a photo of the bill, a photo of the cash they 
 ### 🧮 2. Check My Change (Visual Picker)
 A hybrid flow where the user inputs what they paid using **Visual Money Cards** (tapping an image of a $20 bill rather than typing "20") and scans the change received. The app visually highlights exactly which notes are missing or extra.
 
+<h3>🎥 video — of the functionaliy</h3>
+<a href="https://www.youtube.com/watch?v=i3c02MN0B4k" target="_blank" rel="noopener noreferrer">
+  <img
+    src="https://img.youtube.com/vi/i3c02MN0B4k/maxresdefault.jpg"
+    alt="Demo of ND Money Flow"
+    width="480"
+  />
+</a>
+
+
 ### 🤝 3. Payment Assistant
 A user scans the contents of their wallet. The AI analyzes the available denominations and suggests the **optimal combination** of notes to pay a specific bill, prioritizing exact change to reduce social anxiety at the register.
 
