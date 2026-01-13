@@ -72,7 +72,7 @@ Integrated speech-to-text allows users to simply say "Twenty-five dollars" rathe
 
 A special acknowledgement to **Microsoft's `bank_note_net` repository**. 
 
-We utilized their research on currency detection to inform our offline capabilities. Specifically, we fused concepts from their **encoder-decoder model architecture** to train our own lightweight, mobile-optimized models. This allows ND Money to perform accurate bounding-box detection and denomination classification directly on the device, ensuring accessibility even in low-connectivity environments.
+I utilized their research on currency detection to inform our offline capabilities. Specifically, i fused concepts from their **encoder-decoder model architecture** to train my own lightweight, mobile-optimized models. This allows ND Money to perform accurate bounding-box detection and denomination classification directly on the device, ensuring accessibility even in low-connectivity environments.
 
 ---
 
