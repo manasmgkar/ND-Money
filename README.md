@@ -96,54 +96,9 @@ Integrated speech-to-text allows users to simply say "Twenty-five dollars" rathe
 
 **Offline Detection Architecture**
 
-This project utilizes custom-trained TensorFlow Lite models for on-device currency detection. We would like to give a special mention to **Microsoft's `bank_note_net` repository**.
+This project utilizes custom-trained TensorFlow Lite classifier models for offline on-device currency detection(still in beta mode). I would like to give a special mention to [Microsoft's Bank note note](https://github.com/microsoft/banknote-net) .
 
-We adapted concepts from their research, specifically fusing their **encoder-decoder model architecture**, to create our lightweight mobile models. Their work on robust currency embeddings was instrumental in enabling our offline functionality.
-
----
-
-## 🚀 Getting Started
-
-### Prerequisites
-*   Node.js (v18+)
-*   A Google Gemini API Key
-
-### Installation
-
-1.  **Clone the repo**
-    ```bash
-    git clone https://github.com/yourusername/nd-money.git
-    cd nd-money
-    ```
-
-2.  **Install dependencies**
-    ```bash
-    npm install
-    ```
-
-3.  **Set up Environment Variables**
-    Create a `.env` file in the root:
-    ```env
-    VITE_API_KEY=your_gemini_api_key_here
-    ```
-
-4.  **Run Development Server**
-    ```bash
-    npm run dev
-    ```
-
-### Building for Mobile (Capacitor)
-
-1.  **Build the React App**
-    ```bash
-    npm run build
-    ```
-
-2.  **Sync with Android/iOS**
-    ```bash
-    npx cap sync
-    npx cap open android
-    ```
+I adapted concepts from their research, specifically fusing their **encoder-decoder model architecture**, to create the lightweight mobile classifier's that run using tensorflow-lite/lightrt on any edge device out there. Their work on robust currency embeddings was instrumental in enabling this apps offline functionality.
 
 ---
 
