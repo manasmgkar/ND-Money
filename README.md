@@ -107,6 +107,11 @@ Watch a short walkthrough of the **Check my change flow**, showing how transacti
 ### 🤝 3. Payment Assistant
 A user scans the contents of their wallet. The AI analyzes the available denominations and suggests the **optimal combination** of notes to pay a specific bill, prioritizing exact change to reduce social anxiety at the register.
 
+👉 **[Watch the Pay Helper demo on YouTube](https://www.youtube.com/watch?v=_2EsGE4REKc)**
+
+[![ND-Money Pay Helper Demo](https://img.youtube.com/vi/_2EsGE4REKc/maxresdefault.jpg)](https://www.youtube.com/watch?v=_2EsGE4REKc)
+
+
 ### 🏪 4. Merchant Mode (Give Change)
 Designed for neurodivergent employees. It calculates the change due and displays a **visual map** of exactly which notes and coins to pick from the register to hand to the customer.
 
