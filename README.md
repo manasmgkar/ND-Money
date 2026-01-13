@@ -29,8 +29,9 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
   <img src="https://github.com/user-attachments/assets/59cab3df-470b-4583-8a3e-650f9d02cd6e" width="22%" alt="Visual Scanner">
   <img src="https://github.com/user-attachments/assets/28bd81d2-9ed8-482f-ae5b-931d9c14d7f6" width="22%" alt="Visual Result">
   <img src="https://github.com/user-attachments/assets/58244224-b11a-44db-912f-f61ba01fd49b" width="22%" alt="Payment Advice">
-  <img src="[https://github.com/user-attachments/assets/58244224-b11a-44db-912f-f61ba01fd49b" width="22%" alt="Payment Advice">
+  <img src="https://github.com/user-attachments/assets/0ace5c1b-5330-4e3c-8dad-5695e1aa9aed" width="22%" alt="Payment Advice"> 
 </p>
+
 
 
 ### 2. Color Association & Recognition
