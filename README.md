@@ -45,7 +45,8 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 <p align="center">
      <img src="https://github.com/user-attachments/assets/28bd81d2-9ed8-482f-ae5b-931d9c14d7f6" width="22%" alt="Visual Result">
      <img src="https://github.com/user-attachments/assets/0ace5c1b-5330-4e3c-8dad-5695e1aa9aed" width="22%" alt="Payment Advice">
-     </p>
+     <img src="https://github.com/user-attachments/assets/1791a711-af97-4071-8ed4-1c2b44c3c9e2" width="22%" alt="Correct Change">
+</p>
 
 ### 3. Cognitive Offloading via Linear Flows
 *   **The Problem:** Working memory is often a bottleneck. Holding a number in your head while counting change leads to anxiety.
