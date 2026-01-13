@@ -21,15 +21,14 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 ### 1. Visual Anchors Over Digits
 *   **The Insight:** A lot of currencies have the same basic color for every denomination,Japanese yen being one example. A user might struggle to distinguish "1000" from "10000" at a glance, but they instantly recognize visual landmarks. 
 *   **The Solution:** We display currency as **high-fidelity images**, not just numbers.
-    *   *Example:* Instead of forcing a user to read "¥10,000", the app shows the cropped photo of the note featuring **The Tokyo station**. The user recognizes the "Tokyo Station," not the zero count.
+    *   *Example:* Instead of forcing a user to read "¥10,000", the app shows the cropped photo of the note featuring **The Tokyo station**. The user recognizes the "Tokyo Station," not the zero count. **or Lincoln on the 5$ note.**
     *   *Implementation:* The app includes a dedicated asset library for notes and coins (USD, JPY, EUR, etc.) to trigger this visual memory match.
  
 <p align="center">
   <img src="https://github.com/user-attachments/assets/6b87731a-2d07-4993-927f-f581d1cb1a76" width="22%" alt="Home Screen">
   <img src="https://github.com/user-attachments/assets/59cab3df-470b-4583-8a3e-650f9d02cd6e" width="22%" alt="Visual Scanner">
-  <img src="https://github.com/user-attachments/assets/28bd81d2-9ed8-482f-ae5b-931d9c14d7f6" width="22%" alt="Visual Result">
   <img src="https://github.com/user-attachments/assets/58244224-b11a-44db-912f-f61ba01fd49b" width="22%" alt="Payment Advice">
-  <img src="https://github.com/user-attachments/assets/0ace5c1b-5330-4e3c-8dad-5695e1aa9aed" width="22%" alt="Payment Advice"> 
+  
 </p>
 
 
@@ -42,6 +41,11 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
         *   <span style="color:#059669">**Green (Keep)**</span>: Money you hold.
         *   <span style="color:#dc2626">**Red (Return)**</span>: Excess change to give back.
         *   <span style="color:#0d9488">**Teal (Total)**</span>: The calculated sum.
+          
+<p align="center">
+     <img src="https://github.com/user-attachments/assets/28bd81d2-9ed8-482f-ae5b-931d9c14d7f6" width="22%" alt="Visual Result">
+     <img src="https://github.com/user-attachments/assets/0ace5c1b-5330-4e3c-8dad-5695e1aa9aed" width="22%" alt="Payment Advice">
+     </p>
 
 ### 3. Cognitive Offloading via Linear Flows
 *   **The Problem:** Working memory is often a bottleneck. Holding a number in your head while counting change leads to anxiety.
