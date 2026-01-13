@@ -19,7 +19,7 @@ Change and physical monetry transactions and change calculation can be difficult
 However, many dyslexic individuals are **highly proficient visual thinkers**. Their memory and processing is anchored in imagery, color, and pattern recognition rather than rote arithmetic. ND Money was designed to leverage these strengths.
 
 ### 1. Visual Anchors Over Digits
-*   **The Insight:** A user might struggle to distinguish "1000" from "10000" at a glance, but they instantly recognize visual landmarks.
+*   **The Insight:** A lot of currencies have the same basic color for every denomination,Japanese yen being one example. A user might struggle to distinguish "1000" from "10000" at a glance, but they instantly recognize visual landmarks. 
 *   **The Solution:** We display currency as **high-fidelity images**, not just numbers.
     *   *Example:* Instead of forcing a user to read "¥10,000", the app shows the cropped photo of the note featuring **The Tokyo station**. The user recognizes the "Tokyo Station," not the zero count.
     *   *Implementation:* The app includes a dedicated asset library for notes and coins (USD, JPY, EUR, etc.) to trigger this visual memory match.
@@ -35,7 +35,7 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 
 
 ### 2. Color Association & Recognition
-*   **The Insight:** Dyslexic users often rely on color coding to categorize information quickly without reading.
+*   **The Insight:** Dyslexic users often rely on color coding to categorize information quickly without reading.For currencies that have unique colors for each denomination we have a differetn visual solution. 
 *   **The Solution:**
     *   **Currency Tinting:** The UI mimics the real-world color palette of the currency (e.g., Beige/Green for USD, Purple/Brown for large JPY notes) to reduce cognitive load. Example : The Indian 100 rupee note is purple, INR 20 Note is Green.
     *   **Action Coding:** We utilize distinct semantic colors for instructions:
