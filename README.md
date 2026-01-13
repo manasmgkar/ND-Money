@@ -21,7 +21,7 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 ### 1. Visual Anchors Over Digits
 *   **The Insight:** A user might struggle to distinguish "1000" from "10000" at a glance, but they instantly recognize visual landmarks.
 *   **The Solution:** We display currency as **high-fidelity images**, not just numbers.
-    *   *Example:* Instead of forcing a user to read "¥10,000", the app shows the note featuring **The Great Wave off Kanagawa**. The user recognizes the "Wave," not the zero count.
+    *   *Example:* Instead of forcing a user to read "¥10,000", the app shows the cropped photo of the note featuring **The Tokyo station**. The user recognizes the "Tokyo Station," not the zero count.
     *   *Implementation:* The app includes a dedicated asset library for notes and coins (USD, JPY, EUR, etc.) to trigger this visual memory match.
  
 <p align="center">
