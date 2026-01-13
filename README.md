@@ -80,14 +80,12 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 ### 📸 1. Verify Bill & Change (Full Auto)
 The complete loop. The user takes a photo of the bill, a photo of the cash they handed over, and a photo of the change they received. The AI calculates the math and verifies if the change is correct using computer vision to count the coins and notes.
 
-<h3>🎥 Demo — ND Money: Verify Bill & Change</h3>
-<a href="https://www.youtube.com/watch?v=_2EsGE4REKc" target="_blank" rel="noopener noreferrer">
-  <img
-    src="https://img.youtube.com/vi/_2EsGE4REKc/maxresdefault.jpg"
-    alt="ND Money Demo – Verify Bill & Change"
-    width="480"
-  />
-</a>
+Watch a short walkthrough of **ND-Money’s bill verification and change detection flow**, demonstrating how the system helps users quickly verify currency and handle change with confidence.
+
+👉 **[Watch the demo on YouTube](https://www.youtube.com/watch?v=_2EsGE4REKc)**
+
+[![ND-Money Verify Bill & Change Demo](https://img.youtube.com/vi/_2EsGE4REKc/maxresdefault.jpg)](https://www.youtube.com/watch?v=_2EsGE4REKc)
+
 
 
 ### 🧮 2. Check My Change (Visual Picker)
