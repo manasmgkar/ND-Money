@@ -37,7 +37,7 @@ However, many dyslexic individuals are **highly proficient visual thinkers**. Th
 ### 2. Color Association & Recognition
 *   **The Insight:** Dyslexic users often rely on color coding to categorize information quickly without reading.For currencies that have unique colors for each denomination we have a differetn visual solution. 
 *   **The Solution:**
-    *   **Currency Tinting:** The UI mimics the real-world color palette of the currency (e.g., Beige/Green for USD, Purple/Brown for large JPY notes) to reduce cognitive load. Example : The Indian 100 rupee note is purple, INR 20 Note is Green.
+    *   **Currency Tinting:** The UI mimics the real-world color palette of the currency to reduce cognitive load. Example : The Indian 100 rupee note is purple, INR 20 Note is Green. The 100 GBP note has a Different Color than the 20 GBP note.
     *   **Action Coding:** We utilize distinct semantic colors for instructions:
         *   <span style="color:#059669">**Green (Keep)**</span>: Money you hold.
         *   <span style="color:#dc2626">**Red (Return)**</span>: Excess change to give back.
