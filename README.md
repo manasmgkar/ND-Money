@@ -151,13 +151,10 @@ I adapted concepts from their research, specifically fusing their **encoder-deco
 
 ---
 
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
 ## 🚀 Coming to the Google PLay store for Android Phones Soon
 
-
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
+
+
