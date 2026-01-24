@@ -153,6 +153,8 @@ I adapted concepts from their research, specifically fusing their **encoder-deco
 
 ## 🚀 Coming to the Google PLay store for Android Phones Soon
 
+Internal Test Link --> https://play.google.com/apps/internaltest/4701315411457144348
+
 ## 📄 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
