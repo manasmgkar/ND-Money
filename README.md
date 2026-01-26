@@ -129,6 +129,161 @@ Integrated speech-to-text allows users to simply say "Twenty-five dollars" rathe
 *   **Online:** Uses **Google Gemini 3.0 Flash** for high-level reasoning, complex scene analysis, and payment advice.
 *   **Offline:** Uses on-device  **custom trained small classifiers** that run on **TensorFlow Lite** models for detecting and counting currency when internet connectivity is poor.
 
+## 🧠 Client-Side Composite AI Pipeline (WASM)
+
+The app runs a **fully client-side Composite AI Pipeline** using **WebAssembly (WASM)** via `@mediapipe/tasks-vision`.
+The problem is intentionally split into two stages:
+
+* **Localization** → *Where is the object?*
+* **Classification** → *What is the object?*
+
+This separation improves accuracy, performance, and resilience in real-world conditions.
+
+## 🧩 Pipeline Architecture
+
+### **Stage 1: Localization — Global Object Detection**
+
+**Engine:** MediaPipe Object Detector (`efficientdet_lite0`)
+**Role:** Acts as a lightweight *Region Proposal Network* (RPN), drawing bounding boxes around potential objects in the frame.
+
+**Why `efficientdet_lite0`?**
+
+* Quantized **INT8** model
+* Optimized for mobile CPUs / GPUs
+* Consistently achieves **<100ms inference**, even on older Android devices
+
+#### 🔁 Fallback Mechanism — *Smart Crops*
+
+Object detectors can fail with:
+
+* Fanned currency notes
+* Extreme angles
+* Partial occlusions
+
+**Algorithm**
+
+* If detection fails (or as a supplement), the frame is sliced into **6 overlapping Smart Crops**:
+
+  * 4 quadrants
+  * Center crop
+  * Full frame
+
+**Benefit**
+Even if the detector misses the object, **relevant visual data is still passed to the classifier**, dramatically improving recall.
+
+
+### **Stage 2: Classification — Custom Encoder–Decoder**
+
+**Engine:** MediaPipe Image Classifier using custom `.tflite` models
+**Architecture:** Encoder–Decoder inspired by Microsoft’s `bank_note_net`
+
+* **Encoder:** Extracts high-level features
+  *(textures, holographic strips, typography, security patterns)*
+* **Decoder:** Maps features to a probability distribution
+  *(e.g. `USD_20`, `USD_50`, `INR_100`, `Background`)*
+
+#### 🌍 Dynamic Model Loading
+
+To minimize memory usage:
+
+* The app **does not load a global classifier**
+* Uses **Geolocation** to lazy-load only the relevant model
+
+  * `classifier_INR.tflite`
+  * `classifier_USD.tflite`
+  * etc.
+
+**Quantization**
+
+* Models are **Float16 / INT8**
+* ~**2MB per currency**
+* Optimized for low RAM usage inside a mobile WebView
+
+
+
+## 🎯 Accuracy & Logic — *The Heuristic Layer*
+
+Raw AI output is noisy. A dedicated post-processing layer improves reliability and removes false positives.
+
+
+### **1. Bounding Box Logic (NMS Variant)**
+
+* **IoU (Intersection over Union)**
+  Measures overlap between detector boxes and Smart Crops
+
+* **Containment Ratio**
+
+  * If a low-confidence box is **>40% contained** inside a higher-confidence box of the same class → discard it
+
+* **Center Distance Clustering**
+
+  * Boxes predicting the same value with centers within **20% of the image diagonal** are merged
+
+
+### **2. Weighted Confidence Scoring**
+
+Not all predictions are treated equally:
+
+| Source          | Multiplier |
+| --------------- | ---------- |
+| Object Detector | **1.2×**   |
+| Smart Crop      | **0.9×**   |
+
+**Result**
+
+* Biases decisions toward *true object detections*
+* Keeps Smart Crops as a safety net for difficult angles
+
+
+
+### **3. Ghost Killing (Currency-Specific Heuristics)**
+
+**Problem**
+Visually similar currencies can produce weak, overlapping signals
+*(e.g., INR 20 vs INR 50)*
+
+**Solution**
+
+* Currency-aware suppression rules
+* Example:
+
+  * If a **weak ₹200** signal appears inside a **strong ₹50** detection
+    → suppress the ₹200 as a texture misread
+
+This dramatically reduces false positives in real-world lighting.
+
+
+
+## 📲 UI Integration — Coordinate Mapping
+
+* **Normalization:**
+  TF Lite returns bounding boxes in normalized coordinates *(0.0 → 1.0)*
+
+* **Canvas Projection:**
+  Coordinates are mapped to viewport dimensions to render **AR overlays** (green/red badges)
+
+* **Performance:**
+  The full pipeline
+  *(Capture → Detect → Crop → Classify → Filter → Render)*
+  runs inside a `requestAnimationFrame` loop, ensuring:
+
+  * Zero React UI blocking
+  * Smooth real-time video feed
+
+
+
+## 🚀 Why This Approach?
+
+* **🔐 Privacy(offline mode)**
+  All inference runs on-device — no images leave the phone in Offline Mode
+
+* **⚡ Low Latency**
+  No HTTP calls. End-to-end inference in milliseconds enables a real-time AR experience
+
+* **🛡️ Resilience**
+  The **Detector + Smart Crop hybrid** reliably handles fanned notes and odd angles — a known failure mode of standard object detectors
+
+
 ---
 
 ## 🛠️ Tech Stack
