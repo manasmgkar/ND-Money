@@ -171,6 +171,30 @@ Object detectors can fail with:
 **Benefit**
 Even if the detector misses the object, **relevant visual data is still passed to the classifier**, dramatically improving recall.
 
+### **Stage 2.0: Classification - Online Mode**
+
+#### 🏗️ AI Architecture Decision: Why Gemini 3 Flash?
+
+For this specific use case, I selected **Gemini 3 Flash Preview** over older models (Gemini 1.5 Pro/Flash). Here is the technical justification:
+
+### 1. The "Checkout Latency" Constraint
+
+*   **The Problem:** Users with dyscalculia experience acute anxiety at the checkout line. Every second of delay increases social pressure. A 3-4 second latency (common with Gemini 1.5 Pro) feels like an eternity when a line is forming behind you.
+*   **The Solution:** Gemini 3 Flash offers significantly lower **Time-To-First-Token (TTFT)**. By setting the `thinkingBudget` to 0, we leverage the model's raw speed to return structured JSON in sub-seconds, creating a "real-time" feeling that is critical for accessibility tools.
+
+### 2. Spatial Grounding (Bounding Boxes)
+*   **The Problem:** Older LLMs often "hallucinate" coordinates. They might correctly identify a $10 bill but draw the bounding box in the wrong location.
+*   **The Solution:** Gemini 3 has vastly improved **spatial reasoning capabilities**. It can accurately return `[ymin, xmin, ymax, xmax]` coordinates for multiple overlapping objects (fanned cash). This accuracy is non-negotiable for our AR overlay feature—if the "Red X" appears on the wrong note, the user might give away the wrong money.
+
+### 3. Combinatorial Reasoning (The "Knapsack Problem")
+*   **The Problem:** The "Payment Assistant" feature (suggesting which notes to use to pay a $17.50 bill) is a variation of the Knapsack optimization problem. Smaller/older models often default to "give the largest note," which isn't helpful.
+*   **The Solution:** Gemini 3 demonstrates stronger logic coherence. It can follow complex heuristics (e.g., "Prioritize exact change," "Get rid of heavy coins first") without needing a massive context window or chain-of-thought prompting.
+
+### 4. Strict Schema Adherence
+*   **The Problem:** The app relies entirely on a strict JSON schema to render the UI. Conversational models often add "Here is the analysis..." filler text, breaking the JSON parser.
+*   **The Solution:** Gemini 3 Flash follows `responseSchema` constraints more rigidly than previous generations, reducing client-side parsing errors to near zero.
+
+---
 
 ### **Stage 2.1: Offline Classification(if gemini api is unavailable/offline mode) — Custom Encoder–Decoder**
 
@@ -229,8 +253,13 @@ Not all predictions are treated equally:
 | Object Detector | **1.2×**   |
 | Smart Crop      | **0.9×**   |
 
-**Result**
+**Detector Bonus:**  Boxes found by the Object Detector get a 1.2x score multiplier (because the AI "saw" an object).
 
+**Blind Crop Penalty:** "Smart Crops" get a 0.9x score penalty (because they are blind guesses).
+
+
+**Result**
+* This biases the system towards actual objects while keeping the Smart Crops as a safety net for difficult angles.
 * Biases decisions toward *true object detections*
 * Keeps Smart Crops as a safety net for difficult angles
 
