@@ -172,7 +172,7 @@ Object detectors can fail with:
 Even if the detector misses the object, **relevant visual data is still passed to the classifier**, dramatically improving recall.
 
 
-### **Stage 2: Classification — Custom Encoder–Decoder**
+### **Stage 2.1: Offline Classification(if gemini api is unavailable/offline mode) — Custom Encoder–Decoder**
 
 **Engine:** MediaPipe Image Classifier using custom `.tflite` models
 **Architecture:** Encoder–Decoder inspired by Microsoft’s `bank_note_net`
