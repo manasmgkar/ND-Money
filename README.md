@@ -1,8 +1,8 @@
 # 💸 ND Money (Neurodivergent Money)
 
-**A visual, AI-powered financial assistant designed specifically for Neurodivergent visual thinkers and users with dyscalculia.**
+**A visual, AI-powered financial assistant designed specifically for Neurodivergent visual thinkers and users with dyscalculia.Inspired by the Seeing AI app developed my microsoft research**
 
-ND Money bridges the gap between physical cash and mental math. By combining Google's Gemini API for complex reasoning with on-device computer vision, the app provides a stress-free environment for handling bills, checking change, and deciding how to pay—all without requiring the user to process abstract numbers.
+ND Money bridges the gap between physical cash and mental math. By combining Google's Gemini API(Online Mode) + Microsofts Bank note net(Offline mode) for complex reasoning with on-device computer vision, the app provides a stress-free environment for handling bills, checking change, and deciding how to pay—all without requiring the user to process abstract numbers.
 ---
 
 ## The reddit post that inspired this app
